@@ -10,6 +10,8 @@ ReactDom.render(
     document.getElementById('root')
 );
 
+// TODO: refactor next like ./components/buttons
+
 
 // import { Spin } from './react-components/spin/spin';
 // import { Input } from './react-components/input/input';

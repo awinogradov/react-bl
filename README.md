@@ -1,5 +1,9 @@
 # react-components
 
-Powerful React components which use BEMHTML.
+Powerful React components which uses XJST.
 
-> npm i && npm run build && npm run dev
+> npm i && cd examples npm i && npm start
+
+### License
+
+MIT
