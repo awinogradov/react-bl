@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
+    "postinstall": "cd ./node_modules/bem-xjst && npm run make",
     "build": "STANDALONE=1 webpack",
     "dev": "node server.js",
     "open": "open http://localhost:8080",

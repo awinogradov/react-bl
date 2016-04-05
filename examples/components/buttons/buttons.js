@@ -1,9 +1,9 @@
 const React = require('react');
 
 const Button = require('../../../src').Button;
-require('bem-loader!../styles/button/button.css');
+require('bem-loader!../../styles/button/button.css');
 
-export class Buttons extends React.Component {
+module.exports = class Buttons extends React.Component {
 
     render() {
         return (
@@ -35,4 +35,5 @@ export class Buttons extends React.Component {
                 <Button theme='islands' size='xl' text='Size XL' view='action' />
             </div>
         );
+    }
 }
