@@ -1,0 +1,32 @@
+{
+  "name": "react-components",
+  "version": "0.0.1",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "STANDALONE=1 webpack",
+    "postinstall": "cd ./node_modules/bem-xjst && npm run make && cd .. && cd .. && npm run build"
+  },
+  "dependencies": {
+    "bem-components": "git+ssh://git@github.com/awinogradov/bem-components.git#v2",
+    "bem-core": "git+ssh://git@github.com/bem/bem-core.git#v2",
+    "bem-xjst": "git+ssh://git@github.com:awinogradov/bem-xjst.git#feature/bemreact",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-xjst": "git+ssh://git@github.com/bem-contrib/react-xjst.git"
+  },
+  "author": "Anton Winogradov <winogradovaa@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "bem-loader": "^0.4.0",
+    "browserify": "^13.0.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "fs-extra": "^0.26.7",
+    "url-loader": "^0.5.7"
+  }
+}
