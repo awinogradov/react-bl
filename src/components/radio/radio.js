@@ -1,5 +1,5 @@
 const React = require('react');
-const provide = require('../../provide');
+const provide = require('../../provider/provider');
 
 module.exports = class Radio extends React.Component {
 

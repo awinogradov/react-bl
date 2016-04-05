@@ -1,7 +1,7 @@
 const React = require('react');
 
 const Button = require('../../../src').Button;
-require('bem-loader!../../styles/button/button.css');
+require('bem-loader!../../design/button/button.css');
 
 module.exports = class Buttons extends React.Component {
 

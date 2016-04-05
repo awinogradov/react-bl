@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
-import block from 'bem-cn';
+// TODO: POC
 
-export default class BEM extends Component {
+const React = require('react');
+const Component = React.Component;
+const block = require('bem-cn');
+
+module.exports = class BEM extends Component {
     constructor(props, context) {
         super(props, context);
         this.bem = this.bem || {};
