@@ -1,6 +1,8 @@
 const path = require('path');
 const bemLoader = require('bem-loader');
 const CollectBemAssetsPlugin = bemLoader.CollectBemAssetsPlugin;
+const fs = require('fs-extra');
+const bemxjst = require('bem-xjst');
 
 module.exports = {
     entry: './index.js',
@@ -49,8 +51,14 @@ module.exports = {
         new CollectBemAssetsPlugin({
             done: function(data) {
                 bemLoader.setStylesData(data['styl']);
+                fs.outputFileSync(
+                    './dist/templates.js',
+                    bemxjst.vidom.generate(
+                        bemLoader.generateBemHtml(data.bemhtml)
+                    )
+                );
             },
-            techs: ['styl'],
+            techs: ['bemhtml', 'styl'],
             levels: [
                 'bem-components/design/common.blocks',
                 'bem-components/design/desktop.blocks'

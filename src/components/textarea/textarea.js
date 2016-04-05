@@ -1,8 +1,7 @@
-var React = require('react');
-var provide = require('../../provide');
+const React = require('react');
+const provide = require('../../provide');
 
-require('bem-loader!./textarea.css');
-export class Textarea extends React.Component {
+module.exports = class Textarea extends React.Component {
 
     constructor(props, context) {
         super(props, context);

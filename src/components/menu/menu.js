@@ -1,8 +1,7 @@
-var React = require('react');
-var provide = require('../../provide');
+const React = require('react');
+const provide = require('../../provide');
 
-require('bem-loader!./menu.css');
-export class Menu extends React.Component {
+module.exports = class Menu extends React.Component {
 
     constructor(props, context) {
         super(props, context);

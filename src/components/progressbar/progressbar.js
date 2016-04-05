@@ -1,8 +1,7 @@
-var React = require('react');
-var provide = require('../../provide');
+const React = require('react');
+const provide = require('../../provide');
 
-require('bem-loader!./progressbar.css');
-export class Progressbar extends React.Component {
+module.exports = class Progressbar extends React.Component {
 
     constructor(props, context) {
         super(props, context);

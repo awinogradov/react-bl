@@ -1,5 +1,5 @@
-var React = require('react');
-var provide = require('../../provider/provider');
+const React = require('react');
+const provide = require('../../provide');
 
 module.exports = class Button extends React.Component {
 

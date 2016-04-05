@@ -1,8 +1,7 @@
-var React = require('react');
-var provide = require('../../provide');
+const React = require('react');
+const provide = require('../../provide');
 
-require('bem-loader!./attach.css');
-export class Attach extends React.Component {
+module.exports = class Attach extends React.Component {
 
     constructor(props, context) {
         super(props, context);

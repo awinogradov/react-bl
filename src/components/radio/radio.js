@@ -1,8 +1,7 @@
-var React = require('react');
-var provide = require('../../provide');
+const React = require('react');
+const provide = require('../../provide');
 
-require('bem-loader!./radio.css');
-export class Radio extends React.Component {
+module.exports = class Radio extends React.Component {
 
     constructor(props, context) {
         super(props, context);

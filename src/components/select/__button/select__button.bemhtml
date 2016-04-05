@@ -1,3 +1,5 @@
+// FIXME: HOT FIX!!!
+
 block('select').elem('button')(
     def()(function() {
         var select = this._select,
@@ -25,12 +27,12 @@ block('select').elem('button')(
             id : select.id,
             tabIndex : select.tabIndex,
             content : [
-            // HARDCODE БЛЯТЬ!!! apply('content') не пашет!!! 
+            // HARDCODE!!! apply('content') не пашет!!!
                 {
                     elem: 'text',
                     content: select.text
                 },
-            // HARDCODE БЛЯТЬ!!!
+            // HARDCODE!!!
                 { block : 'icon', mix : { block : 'select', elem : 'tick' } }
             ]
         });
