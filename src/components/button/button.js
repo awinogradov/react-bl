@@ -7,6 +7,7 @@ module.exports = class Button extends Control {
 
     constructor(props) {
         super(props);
+        
         this._focusedByPointer = false;
         this._isPointerPressInProgress = false;
     }
@@ -25,25 +26,19 @@ module.exports = class Button extends Control {
 
     _onFocus(e) {
         this._focus();
-        this.props.onFocus &&
-        this.props.onFocus(e, this.state);
+
+        this.props.onFocus && this.props.onFocus(e, this.state);
     }
 
     _onBlur(e) {
-        this.setMod({
-            pressed: false,
-            'focused-hard': false
-        });
-        this.setState({
-            pressed: false,
-            'focused-hard': false
-        });
+        this.setMod({pressed: false, 'focused-hard': false});
+        this.setState({pressed: false, 'focused-hard': false});
+
         super._onBlur(e);
     }
 
     _onClick(e) {
-        this.props.onClick &&
-        this.onClick(e, this.state);
+        this.props.onClick && this.onClick(e, this.state);
     }
 
     _onMouseLeave(e) {
@@ -51,17 +46,19 @@ module.exports = class Button extends Control {
             this.setMod({pressed: false});
             this.setState({pressed: false});
         }
+
         super._onMouseLeave(e);
     }
 
     _onMouseDown(e) {
         this._isPointerPressInProgress = true;
+
         if(!this.props.disabled) {
             this._focusedByPointer = true;
             this.setMod({pressed: true});
             this.setState({pressed: true});
-            this.props.onMouseDown &&
-            this.props.onMouseDown(e, this.state);
+
+            this.props.onMouseDown && this.props.onMouseDown(e, this.state);
         }
     }
 
