@@ -20,12 +20,10 @@ module.exports = class Control extends BEM {
     }
 
     _onMouseEnter(e) {
-        if(!this.props.disabled) {
-            this.setMod({hovered: true});
-            this.setState({hovered: true});
+        this.setMod({hovered: true});
+        this.setState({hovered: true});
 
-            this.props.onMouseEnter && this.props.onMouseEnter(e, this.state);
-        }
+        this.props.onMouseEnter && this.props.onMouseEnter(e, this.state);
     }
 
     _onMouseLeave(e) {
