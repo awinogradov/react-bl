@@ -7,7 +7,7 @@ module.exports = class Button extends Control {
 
     constructor(props) {
         super(props);
-        
+
         this._focusedByPointer = false;
         this._isPointerPressInProgress = false;
     }
@@ -72,8 +72,7 @@ module.exports = class Button extends Control {
         this.setMod({pressed: false});
         this.setState({pressed: false});
 
-        this.props.onMouseUp &&
-        this.props.onMouseUp(e, this.state);
+        this.props.onMouseUp && this.props.onMouseUp(e, this.state);
     }
 
     render() {
@@ -81,8 +80,8 @@ module.exports = class Button extends Control {
             block: this.bem.block,
             attrs: {
                 onMouseEnter: this._onMouseEnter.bind(this),
-                onFocus: this._onFocus.bind(this),
                 onMouseLeave: this._onMouseLeave.bind(this),
+                onFocus: this._onFocus.bind(this),
                 onBlur: this._onBlur.bind(this),
                 onClick: this._onClick.bind(this),
                 onMouseDown: this._onMouseDown.bind(this),

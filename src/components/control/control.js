@@ -8,7 +8,7 @@ module.exports = class Control extends BEM {
 
     constructor(props) {
         super(props);
-        
+
         this.state = {};
     }
 

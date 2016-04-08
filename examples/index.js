@@ -2,10 +2,12 @@ const React = require('react');
 const ReactDom = require('react-dom');
 
 const Buttons = require('./components/buttons/buttons');
+const Links = require('./components/links/links');
 
 ReactDom.render(
     <main className='main'>
         <Buttons />
+        <Links />
     </main>,
     document.getElementById('root')
 );
@@ -124,31 +126,6 @@ ReactDom.render(
 //         <Select theme='islands' size='xl' mode='radio-check' text='Select XL' options={[{ val: 1, text: 'option' }]} val={[1]} />
 //
 //         <br/>
-//         <h2>Link</h2>
-//
-//         <Link theme='islands' size='s'>Link S</Link>
-//         &nbsp;
-//         <Link theme='islands' size='s' pseudo={true}>Link S</Link>
-//         &nbsp;
-//         <Link theme='islands' size='s' disabled={true}>Link S</Link>
-//         <br/>
-//         <Link theme='islands' size='m'>Link M</Link>
-//         &nbsp;
-//         <Link theme='islands' size='m' pseudo={true}>Link M</Link>
-//         &nbsp;
-//         <Link theme='islands' size='m' disabled={true}>Link M</Link>
-//         <br/>
-//         <Link theme='islands' size='l'>Link L</Link>
-//         &nbsp;
-//         <Link theme='islands' size='l' pseudo={true}>Link L</Link>
-//         &nbsp;
-//         <Link theme='islands' size='l' disabled={true}>Link L</Link>
-//         <br/>
-//         <Link theme='islands' size='xl'>Link XL</Link>
-//         &nbsp;
-//         <Link theme='islands' size='xl' pseudo={true}>Link XL</Link>
-//         &nbsp;
-//         <Link theme='islands' size='xl' disabled={true}>Link XL</Link>
 //
 //         <br/>
 //         <h2>Radio</h2>
