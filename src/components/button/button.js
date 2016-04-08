@@ -16,11 +16,9 @@ module.exports = class Button extends Control {
         if(this._isPointerPressInProgress) return;
 
         if(this._focusedByPointer) {
-            this.setMod({focused: true});
-            this.setState({focused: true});
+            this.setStateAndMod({focused: true});
         } else {
-            this.setMod({'focused-hard': true});
-            this.setState({'focused-hard': true});
+            this.setStateAndMod({'focused-hard': true});
         }
     }
 
@@ -31,8 +29,7 @@ module.exports = class Button extends Control {
     }
 
     _onBlur(e) {
-        this.setMod({pressed: false, 'focused-hard': false});
-        this.setState({pressed: false, 'focused-hard': false});
+        this.setStateAndMod({pressed: false, 'focused-hard': false});
 
         super._onBlur(e);
     }
@@ -43,8 +40,7 @@ module.exports = class Button extends Control {
 
     _onMouseLeave(e) {
         if(this._isPointerPressInProgress) {
-            this.setMod({pressed: false});
-            this.setState({pressed: false});
+            this.setStateAndMod({pressed: false});
         }
 
         super._onMouseLeave(e);
@@ -55,8 +51,7 @@ module.exports = class Button extends Control {
 
         if(!this.props.disabled) {
             this._focusedByPointer = true;
-            this.setMod({pressed: true});
-            this.setState({pressed: true});
+            this.setStateAndMod({pressed: true});
 
             this.props.onMouseDown && this.props.onMouseDown(e, this.state);
         }
@@ -69,8 +64,7 @@ module.exports = class Button extends Control {
         this._focus();
         this._focusedByPointer = false;
 
-        this.setMod({pressed: false});
-        this.setState({pressed: false});
+        this.setStateAndMod({pressed: false});
 
         this.props.onMouseUp && this.props.onMouseUp(e, this.state);
     }

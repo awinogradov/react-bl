@@ -20,6 +20,11 @@ module.exports = class BEM extends Component {
         this.bem.class = this._buildClass();
     }
 
+    setStateAndMod(object) {
+        this.setMod(object);
+        this.setState(object);
+    }
+
     _buildClass() {
         return this
         .bem
