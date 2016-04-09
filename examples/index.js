@@ -3,21 +3,24 @@ const ReactDom = require('react-dom');
 
 const Buttons = require('./components/buttons/buttons');
 const Checkboxes = require('./components/checkboxes/checkboxes');
-const Links = require('./components/links/links');
-const Progressbars = require('./components/progressbars/progressbars');
-const Spins = require('./components/spins/spins');
 const Icons = require('./components/icons/icons');
 const Images = require('./components/images/images');
+const Links = require('./components/links/links');
+const Progressbars = require('./components/progressbars/progressbars');
+const Radios = require('./components/radios/radios');
+const Spins = require('./components/spins/spins');
+
 
 ReactDom.render(
     <main className='main'>
         <Buttons />
         <Checkboxes />
-        <Links />
-        <Progressbars />
-        <Spins />
         <Icons />
         <Images />
+        <Links />
+        <Progressbars />
+        <Radios />
+        <Spins />
     </main>,
     document.getElementById('root')
 );
@@ -28,7 +31,6 @@ ReactDom.render(
 // import { Textarea } from './react-components/textarea/textarea';
 // import { Select } from './react-components/select/select';
 // import { CheckboxGroup } from './react-components/checkbox-group/checkbox-group';
-// import { Radio } from './react-components/radio/radio';
 // import { RadioGroup } from './react-components/radio-group/radio-group';
 // import { Menu } from './react-components/menu/menu';
 // import { Attach } from './react-components/attach/attach';
@@ -101,17 +103,6 @@ ReactDom.render(
 //         <Select theme='islands' size='l' mode='radio-check' text='Select L' options={[{ val: 1, text: 'option' }]} val={[1]} />
 //         &nbsp;
 //         <Select theme='islands' size='xl' mode='radio-check' text='Select XL' options={[{ val: 1, text: 'option' }]} val={[1]} />
-//
-//         <br/>
-//
-//         <br/>
-//         <h2>Radio</h2>
-//
-//         <Radio theme='islands' size='m' text='Size M' />
-//         <Radio theme='islands' size='l' text='Size L' />
-//         <br/>
-//         <Radio theme='islands' type='button' size='m' text='Size M' />
-//         <Radio theme='islands' type='button' size='l' text='Size L' />
 //
 //         <br/>
 //         <h2>Radio-Group</h2>

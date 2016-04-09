@@ -3,7 +3,7 @@ const React = require('react');
 const Checkbox = require('../../../src').Checkbox;
 require('bem-loader!../../design/checkbox/checkbox.css');
 
-module.exports = class Icons extends React.Component {
+module.exports = class Checkboxes extends React.Component {
 
     render() {
         return (
@@ -24,7 +24,7 @@ module.exports = class Icons extends React.Component {
                 &nbsp;
                 <Checkbox theme='islands' size='l' text='Size M' disabled={true} />
                 &nbsp;
-                <Checkbox theme='islands' size='l' text='Size L' type='button' />                
+                <Checkbox theme='islands' size='l' text='Size L' type='button' />
             </div>
         );
     }
