@@ -36,13 +36,6 @@ module.exports = class Input extends Control {
                 'has-clear': this.props.hasClear,
                 disabled: this.props.disabled
             },
-            clear: {
-                block: 'input',
-                elem: 'clear',
-                attrs: {
-                    onClick: this._onClearClick.bind(this)
-                }
-            },
             id: this.props.id,
             name: this.props.name,
             placeholder: this.props.placeholder,

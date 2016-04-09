@@ -1,5 +1,8 @@
 ({
     shouldDeps: [
-        { mods: { 'has-clear': true } }
+        {
+            mods: { 'has-clear': true },
+            elems: ['clear']
+        }
     ]
 });
