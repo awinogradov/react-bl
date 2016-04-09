@@ -2,19 +2,17 @@ block('input').elem('control')(
     tag()('input'),
 
     attrs()(function() {
-        var input = this._input,
-            attrs = {
-                id: input.id,
-                name: input.name,
-                defaultValue: input.val,
-                maxlength: input.maxLength,
-                tabIndex: input.tabIndex,
-                placeHolder: input.placeholder
-            };
+        const originalAttrs = applyNext();
 
-        input.autocomplete === false && (attrs.autoComplete = 'off');
-        this.mods.disabled && (attrs.disabled = 'disabled');
+        originalAttrs.defaultValue = originalAttrs.value;
+        delete originalAttrs.value;
+        originalAttrs.tabIndex = originalAttrs.tabindex,
+        delete originalAttrs.tabindex;
+        originalAttrs.placeHolder = originalAttrs.placeholder
+        delete originalAttrs.placeholder;
+        originalAttrs.autoComplete = originalAttrs.autocomplete;
+        delete originalAttrs.autocomplete;
 
-        return attrs;
+        return originalAttrs;
     })
 );
