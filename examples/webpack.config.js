@@ -65,7 +65,6 @@ module.exports = {
             ].map(function(short) {
                 return path.resolve(process.cwd(), `./node_modules/${short}`);
             }).concat([
-                '../src/components',
                 './components',
                 './design'
             ])

@@ -7,6 +7,8 @@ module.exports = class Radio extends Control {
 
     _onChange() {
         this.props.disabled || this.setStateAndMod({checked: true});
+
+        this.props.onChange && this.props.onChange(e, this.state);
     }
 
     componentWillMount() {

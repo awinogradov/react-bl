@@ -7,6 +7,8 @@ module.exports = class Checkbox extends Control {
 
     _onChange() {
         this.setStateAndMod({checked: !this.state.checked});
+
+        this.props.onChange && this.props.onChange(e, this.state);
     }
 
     componentWillMount() {
@@ -34,8 +36,8 @@ module.exports = class Checkbox extends Control {
             },
             id: this.props.id,
             name: this.props.name,
-            val: this.props.val,
-            text: this.props.text
+            text: this.props.text,
+            val: this.props.val
         });
     }
 }

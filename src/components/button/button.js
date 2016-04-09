@@ -72,7 +72,7 @@ module.exports = class Button extends Control {
     render() {
         return provide({
             block: this.bem.block,
-            attrs: {
+            attrs: Object.assign({
                 onMouseEnter: this._onMouseEnter.bind(this),
                 onMouseLeave: this._onMouseLeave.bind(this),
                 onFocus: this._onFocus.bind(this),
@@ -81,7 +81,7 @@ module.exports = class Button extends Control {
                 onMouseDown: this._onMouseDown.bind(this),
                 onMouseUp: this._onMouseUp.bind(this),
                 'aria-disabled': this.props.disabled
-            },
+            }, this.props.attrs),
             mods: {
                 size: this.props.size,
                 theme: this.props.theme,
@@ -90,8 +90,10 @@ module.exports = class Button extends Control {
                 focused: this.state.focused,
                 'focused-hard': this.state['focused-hard'],
                 pressed: this.state.pressed,
+                togglable: this.props.togglable, 
                 disabled: this.props.disabled
             },
+            title: this.props.title,
             text: this.props.text,
             content: this.props.children
         });

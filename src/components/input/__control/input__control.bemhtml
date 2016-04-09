@@ -1,0 +1,20 @@
+block('input').elem('control')(
+    tag()('input'),
+
+    attrs()(function() {
+        var input = this._input,
+            attrs = {
+                id: input.id,
+                name: input.name,
+                defaultValue: input.val,
+                maxlength: input.maxLength,
+                tabIndex: input.tabIndex,
+                placeHolder: input.placeholder
+            };
+
+        input.autocomplete === false && (attrs.autoComplete = 'off');
+        this.mods.disabled && (attrs.disabled = 'disabled');
+
+        return attrs;
+    })
+);

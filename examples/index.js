@@ -5,11 +5,11 @@ const Buttons = require('./components/buttons/buttons');
 const Checkboxes = require('./components/checkboxes/checkboxes');
 const Icons = require('./components/icons/icons');
 const Images = require('./components/images/images');
+const Inputs = require('./components/inputs/inputs');
 const Links = require('./components/links/links');
 const Progressbars = require('./components/progressbars/progressbars');
 const Radios = require('./components/radios/radios');
 const Spins = require('./components/spins/spins');
-
 
 ReactDom.render(
     <main className='main'>
@@ -17,6 +17,7 @@ ReactDom.render(
         <Checkboxes />
         <Icons />
         <Images />
+        <Inputs />
         <Links />
         <Progressbars />
         <Radios />
@@ -27,7 +28,6 @@ ReactDom.render(
 
 // TODO: refactor next like ./components/buttons
 
-// import { Input } from './react-components/input/input';
 // import { Textarea } from './react-components/textarea/textarea';
 // import { Select } from './react-components/select/select';
 // import { CheckboxGroup } from './react-components/checkbox-group/checkbox-group';
@@ -38,27 +38,6 @@ ReactDom.render(
 
 // ReactDom.render(
 //     <main className='main'>
-//         <br/>
-//         <h2>Input</h2>
-//
-//         <Input theme='islands' size='s' val='Size S' />
-//         <Input theme='islands' size='s' val='Size S' disabled={true} />
-//         &nbsp;
-//         <br/>
-//         <Input theme='islands' size='m' val='Size M' />
-//         &nbsp;
-//         <Input theme='islands' size='m' val='Size M' disabled={true} />
-//         <br/>
-//         <Input theme='islands' size='l' val='Size L' />
-//         &nbsp;
-//         <Input theme='islands' size='l' val='Size L' disabled={true} />
-//         <br/>
-//         <Input theme='islands' size='xl' val='Size XL' />
-//         &nbsp;
-//         <Input theme='islands' size='xl' val='Size XL' disabled={true} />
-//         <br/>
-//         <Input theme='islands' size='xl' val='Size XL' hasClear={true} />
-//
 //         <br/>
 //         <h2>Textarea</h2>
 //
