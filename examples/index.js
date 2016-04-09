@@ -5,6 +5,8 @@ const Buttons = require('./components/buttons/buttons');
 const Links = require('./components/links/links');
 const Progressbars = require('./components/progressbars/progressbars');
 const Spins = require('./components/spins/spins');
+const Icons = require('./components/icons/icons');
+const Images = require('./components/images/images');
 
 ReactDom.render(
     <main className='main'>
@@ -12,6 +14,8 @@ ReactDom.render(
         <Links />
         <Progressbars />
         <Spins />
+        <Icons />
+        <Images />
     </main>,
     document.getElementById('root')
 );
@@ -140,22 +144,6 @@ ReactDom.render(
 //                 { val: 3, text: 'Гандбол' }
 //             ]}
 //             val={[1]} />
-//         <br/>
-//         <h2>Image</h2>
-//
-//         <Image
-//             url='https://img-fotki.yandex.ru/get/16159/259818507.0/0_130be6_4116d8e7_S'
-//             title= 'Все подробности на bem.info'/>
-//         &nbsp;
-//         <Image
-//             url='https://img-fotki.yandex.ru/get/16159/259818507.0/0_130be6_4116d8e7_S'
-//             title= 'Все подробности на bem.info'
-//             width='200px'
-//             height='100px'/>
-//         &nbsp;
-//         <Image>
-//             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16"><path d="M13.5.5l-8 12L1.7 8l-1 1.6L5.6 15l9.1-13.4z"/></svg>
-//         </Image>
 //
 //         <br/>
 //         <h2>Menu</h2>
@@ -202,12 +190,6 @@ ReactDom.render(
 //         &nbsp;
 //         <Dropdown theme='islands' size='m' type='button' switcher='olololo' popup='one' />
 //
-//         <br/>
-//         <h2>Icon</h2>
-//
-//         <Icon url='https://img-fotki.yandex.ru/get/5405/259818507.0/0_130be5_948d59aa_S' />
-//         &nbsp;
-//         <Icon><svg className="action_type_download" xmlns="..." width="16" height="16"><path d="M1 13v2h14v-2h-14zm13-7h-3v-5h-6v5.031l-3-.031 6 6 6-6z"/></svg></Icon>
 //     </main>,
 //     document.getElementById('root')
 // );
