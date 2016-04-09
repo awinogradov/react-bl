@@ -6,12 +6,6 @@ const BEM = require('../../core/bem/bem');
 
 module.exports = class Control extends BEM {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {};
-    }
-
     _onFocus(e) {
         this.setStateAndMod({focused: true});
 

@@ -6,6 +6,7 @@ const paramCase = require('param-case');
 module.exports = class BEM extends Component {
     constructor(props) {
         super(props);
+        this.state = {};
         this.bem = this.bem || {};
         this.bem.block = block(paramCase(this.constructor.name));
         this.bem.mix = props.mix;
