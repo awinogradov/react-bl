@@ -3,11 +3,13 @@ const ReactDom = require('react-dom');
 
 const Buttons = require('./components/buttons/buttons');
 const Links = require('./components/links/links');
+const Progressbars = require('./components/progressbars/progressbars');
 
 ReactDom.render(
     <main className='main'>
         <Buttons />
         <Links />
+        <Progressbars />
     </main>,
     document.getElementById('root')
 );
@@ -201,11 +203,6 @@ ReactDom.render(
 //             button='Size M'
 //             name='name-attach'
 //             noFileText='Нет файла? Есть BEM-XJST!!!'/>
-//
-//         <br/>
-//         <h2>Progressbar</h2>
-//
-//         <Progressbar theme='islands' val={'49'} />
 //
 //         <br/>
 //         <h2>Dropdown</h2>

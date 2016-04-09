@@ -10,6 +10,12 @@ module.exports = class Progressbar extends React.Component {
     render() {
         return provide({
             block: 'progressbar',
+            attrs: {
+                'aria-valuenow': this.props.val + '%',
+                style: {
+                    width: this.props.val + '%'
+                }
+            },
             mods: {
                 theme: this.props.theme
             },
