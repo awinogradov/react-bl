@@ -9,7 +9,7 @@ module.exports = class Checkbox extends Control {
         this.setStateAndMod({checked: !this.state.checked});
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.state.checked = this.props.checked;
     }
 
@@ -27,7 +27,7 @@ module.exports = class Checkbox extends Control {
                 size: this.props.size,
                 theme: this.props.theme,
                 type: this.props.type,
-                checked: this.state.checked || this.props.checked,
+                checked: this.state.checked,
                 hovered: this.state.hovered,
                 focused: this.state.focused,
                 disabled: this.props.disabled
