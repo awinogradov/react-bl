@@ -36,6 +36,9 @@ module.exports = class Checkbox extends Control {
             },
             id: this.props.id,
             name: this.props.name,
+            tabIndex: this.props.tabIndex,
+            title: this.props.title,
+            icon: this.props.icon,
             text: this.props.text,
             val: this.props.val
         });

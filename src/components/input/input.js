@@ -37,6 +37,7 @@ module.exports = class Input extends Control {
                 disabled: this.props.disabled
             },
             id: this.props.id,
+            tabIndex: this.props.tabIndex,
             name: this.props.name,
             placeholder: this.props.placeholder,
             val: this.state.val

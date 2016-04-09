@@ -43,10 +43,10 @@ module.exports = class Radio extends Control {
             },
             val: this.props.val,
             name: this.props.name,
-            text: this.props.text,
-            icon: this.props.icon,
+            tabIndex: this.props.tabIndex,
             title: this.props.title,
-            content: this.props.children
+            icon: this.props.icon,
+            text: this.props.text
         });
     }
 }

@@ -1,48 +1,33 @@
 const React = require('react');
+
+const Input = require('../input/input');
 const provide = require('../../provider/provider');
 
-module.exports = class Textarea extends React.Component {
-
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            hovered: false,
-            focused: false,
-            value: '',
-        };
-
-        this.handleChange = this.handleChange.bind(this);
-    }
+module.exports = class Textarea extends Input {
 
     render() {
-        let val = this.state.value || this.props.val;
         return provide({
-            block: 'textarea',
+            block: this.bem.block,
             attrs: {
-                onMouseEnter: () => (this.setState({ hovered: true })),
-                onFocus: () => (this.setState({ focused: true })),
-                onMouseLeave: () => (this.setState({ hovered: false })),
-                onBlur: () => (this.setState({ focused: false })),
-                onChange: this.handleChange,
-                // onKeyDown: this.handleKeyDown,
-                // onKeyUp: this.handleKeyUp,
+                onMouseEnter: this._onMouseEnter.bind(this),
+                onMouseLeave: this._onMouseLeave.bind(this),
+                onFocus: this._onFocus.bind(this),
+                onBlur: this._onBlur.bind(this),
+                onChange: this._onChange.bind(this)
             },
-            val: val,
-            id: this.props.id,
-            name: this.props.name,
             mods: {
                 size: this.props.size,
                 theme: this.props.theme,
                 hovered: this.state.hovered,
                 focused: this.state.focused,
                 disabled: this.props.disabled
-            }
+            },
+            id: this.props.id,
+            name: this.props.name,
+            tabIndex: this.props.tabIndex,
+            placeholder: this.props.placeholder,
+            val: this.state.val
         });
     }
 
-    handleChange(e) {
-        let value = e.target.value;
-
-        this.setState({ value });
-    }
 }

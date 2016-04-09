@@ -10,6 +10,7 @@ const Links = require('./components/links/links');
 const Progressbars = require('./components/progressbars/progressbars');
 const Radios = require('./components/radios/radios');
 const Spins = require('./components/spins/spins');
+const Textareas = require('./components/textareas/textareas');
 
 ReactDom.render(
     <main className='main'>
@@ -22,6 +23,7 @@ ReactDom.render(
         <Progressbars />
         <Radios />
         <Spins />
+        <Textareas />
     </main>,
     document.getElementById('root')
 );
@@ -38,25 +40,6 @@ ReactDom.render(
 
 // ReactDom.render(
 //     <main className='main'>
-//         <br/>
-//         <h2>Textarea</h2>
-//
-//         <Textarea theme='islands' size='s' val='Size S' />
-//         &nbsp;
-//         <Textarea theme='islands' size='s' val='Size S' disabled={true} />
-//         <br/>
-//         <Textarea theme='islands' size='m' val='Size M' />
-//         &nbsp;
-//         <Textarea theme='islands' size='m' val='Size M' disabled={true} />
-//         <br/>
-//         <Textarea theme='islands' size='l' val='Size L' />
-//         &nbsp;
-//         <Textarea theme='islands' size='l' val='Size L' disabled={true} />
-//         <br/>
-//         <Textarea theme='islands' size='xl' val='Size XL' />
-//         &nbsp;
-//         <Textarea theme='islands' size='xl' val='Size XL' disabled={true} />
-//
 //         <br/>
 //         <h2>Checkbox-Group</h2>
 //
