@@ -7,7 +7,7 @@ module.exports = class Icon extends BEM {
 
     render() {
         return provide({
-            block: this.bem.class,
+            block: this.bem.block,
             mods: {
                 size: this.props.size,
                 theme: this.props.theme

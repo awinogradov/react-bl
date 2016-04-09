@@ -7,7 +7,7 @@ module.exports = class Progressbar extends BEM {
 
     render() {
         return provide({
-            block: this.bem.class,
+            block: this.bem.block,
             attrs: {
                 'aria-valuenow': this.props.val + '%',
                 style: {

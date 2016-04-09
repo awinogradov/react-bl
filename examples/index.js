@@ -2,6 +2,7 @@ const React = require('react');
 const ReactDom = require('react-dom');
 
 const Buttons = require('./components/buttons/buttons');
+const Checkboxes = require('./components/checkboxes/checkboxes');
 const Links = require('./components/links/links');
 const Progressbars = require('./components/progressbars/progressbars');
 const Spins = require('./components/spins/spins');
@@ -11,6 +12,7 @@ const Images = require('./components/images/images');
 ReactDom.render(
     <main className='main'>
         <Buttons />
+        <Checkboxes />
         <Links />
         <Progressbars />
         <Spins />
@@ -25,15 +27,12 @@ ReactDom.render(
 // import { Input } from './react-components/input/input';
 // import { Textarea } from './react-components/textarea/textarea';
 // import { Select } from './react-components/select/select';
-// import { Checkbox } from './react-components/checkbox/checkbox';
 // import { CheckboxGroup } from './react-components/checkbox-group/checkbox-group';
 // import { Radio } from './react-components/radio/radio';
 // import { RadioGroup } from './react-components/radio-group/radio-group';
-// import { Image } from './react-components/image/image';
 // import { Menu } from './react-components/menu/menu';
 // import { Attach } from './react-components/attach/attach';
 // import { Dropdown } from './react-components/dropdown/dropdown';
-// import { Icon } from './react-components/icon/icon';
 
 // ReactDom.render(
 //     <main className='main'>
@@ -76,25 +75,6 @@ ReactDom.render(
 //         <Textarea theme='islands' size='xl' val='Size XL' />
 //         &nbsp;
 //         <Textarea theme='islands' size='xl' val='Size XL' disabled={true} />
-//
-//         <br/>
-//         <h2>Checkbox</h2>
-//
-//         <Checkbox theme='islands' size='m' text='Size M' />
-//         &nbsp;
-//         <Checkbox theme='islands' size='m' text='Size M' checked={true} />
-//         &nbsp;
-//         <Checkbox theme='islands' size='m' text='Size M' disabled={true} />
-//         &nbsp;
-//         <Checkbox theme='islands' size='m' text='Size M' type='button' />
-//         <br/>
-//         <Checkbox theme='islands' size='l' text='Size L' />
-//         &nbsp;
-//         <Checkbox theme='islands' size='l' text='Size L' checked={true} />
-//         &nbsp;
-//         <Checkbox theme='islands' size='l' text='Size M' disabled={true} />
-//         &nbsp;
-//         <Checkbox theme='islands' size='l' text='Size L' type='button' />
 //
 //         <br/>
 //         <h2>Checkbox-Group</h2>
