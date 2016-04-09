@@ -35,7 +35,9 @@ module.exports = class Button extends Control {
     }
 
     _onClick(e) {
-        this.props.onClick && this.onClick(e, this.state);
+        if(!this.props.disabled) {
+            this.props.onClick && this.onClick(e, this.state);
+        }
     }
 
     _onMouseLeave(e) {
@@ -90,7 +92,7 @@ module.exports = class Button extends Control {
                 focused: this.state.focused,
                 'focused-hard': this.state['focused-hard'],
                 pressed: this.state.pressed,
-                togglable: this.props.togglable, 
+                togglable: this.props.togglable,
                 disabled: this.props.disabled
             },
             title: this.props.title,

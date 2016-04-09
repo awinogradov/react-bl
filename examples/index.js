@@ -30,7 +30,6 @@ ReactDom.render(
 
 // TODO: refactor next like ./components/buttons
 
-// import { Textarea } from './react-components/textarea/textarea';
 // import { Select } from './react-components/select/select';
 // import { CheckboxGroup } from './react-components/checkbox-group/checkbox-group';
 // import { RadioGroup } from './react-components/radio-group/radio-group';
