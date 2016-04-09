@@ -1,18 +1,13 @@
 const React = require('react');
+
+const BEM = require('../../core/bem/bem');
 const provide = require('../../provider/provider');
 
-module.exports = class Spin extends React.Component {
-
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            visible: false
-        };
-    }
+module.exports = class Spin extends BEM {
 
     render() {
         return provide({
-            block: 'spin',
+            block: this.bem.class,
             mods: {
                 size: this.props.size,
                 theme: this.props.theme,

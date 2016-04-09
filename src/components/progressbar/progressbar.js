@@ -1,15 +1,13 @@
 const React = require('react');
+
+const BEM = require('../../core/bem/bem');
 const provide = require('../../provider/provider');
 
-module.exports = class Progressbar extends React.Component {
-
-    constructor(props, context) {
-        super(props, context);
-    }
+module.exports = class Progressbar extends BEM {
 
     render() {
         return provide({
-            block: 'progressbar',
+            block: this.bem.class,
             attrs: {
                 'aria-valuenow': this.props.val + '%',
                 style: {

@@ -4,24 +4,23 @@ const ReactDom = require('react-dom');
 const Buttons = require('./components/buttons/buttons');
 const Links = require('./components/links/links');
 const Progressbars = require('./components/progressbars/progressbars');
+const Spins = require('./components/spins/spins');
 
 ReactDom.render(
     <main className='main'>
         <Buttons />
         <Links />
         <Progressbars />
+        <Spins />
     </main>,
     document.getElementById('root')
 );
 
 // TODO: refactor next like ./components/buttons
 
-
-// import { Spin } from './react-components/spin/spin';
 // import { Input } from './react-components/input/input';
 // import { Textarea } from './react-components/textarea/textarea';
 // import { Select } from './react-components/select/select';
-// import { Link } from './react-components/link/link';
 // import { Checkbox } from './react-components/checkbox/checkbox';
 // import { CheckboxGroup } from './react-components/checkbox-group/checkbox-group';
 // import { Radio } from './react-components/radio/radio';
@@ -29,19 +28,11 @@ ReactDom.render(
 // import { Image } from './react-components/image/image';
 // import { Menu } from './react-components/menu/menu';
 // import { Attach } from './react-components/attach/attach';
-// import { Progressbar } from './react-components/progressbar/progressbar';
 // import { Dropdown } from './react-components/dropdown/dropdown';
 // import { Icon } from './react-components/icon/icon';
 
 // ReactDom.render(
 //     <main className='main'>
-//         <h2>Spin</h2>
-//
-//         <Spin theme='islands' size='s' visible={true} />
-//         <Spin theme='islands' size='m' visible={true} />
-//         <Spin theme='islands' size='l' visible={true} />
-//         <Spin theme='islands' size='xl' visible={true} />
-//
 //         <br/>
 //         <h2>Input</h2>
 //
