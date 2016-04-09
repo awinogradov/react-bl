@@ -1,4 +1,4 @@
-block('link')(
+block('menu')(
     attrs()(function() {
         const originalAttrs = applyNext();
 

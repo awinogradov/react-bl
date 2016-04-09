@@ -41,6 +41,8 @@ module.exports = class MenuItem extends BEM {
                 type: this.props.link,
                 size: this.props.size,
                 theme: this.props.theme,
+                hovered: this.state.hovered,
+                focused: this.state.focused,
                 checked: this.props.checked,
                 disabled: this.props.disabled
             },

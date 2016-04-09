@@ -7,6 +7,7 @@ const Icons = require('./components/icons/icons');
 const Images = require('./components/images/images');
 const Inputs = require('./components/inputs/inputs');
 const Links = require('./components/links/links');
+const Menus = require('./components/menus/menus');
 const Progressbars = require('./components/progressbars/progressbars');
 const Radios = require('./components/radios/radios');
 const Spins = require('./components/spins/spins');
@@ -20,6 +21,7 @@ ReactDom.render(
         <Images />
         <Inputs />
         <Links />
+        <Menus />
         <Progressbars />
         <Radios />
         <Spins />
@@ -76,18 +78,6 @@ ReactDom.render(
 //                 { val: 3, text: 'Гандбол' }
 //             ]}
 //             val={[1]} />
-//
-//         <br/>
-//         <h2>Menu</h2>
-//
-//         <Menu theme='islands' size='l' items={[
-//             { content: 'item 1', val: 1},
-//             { content: [
-//                 { content: 'item 2', val: 2 },
-//                 { content: 'item 3', val: 3 },
-//             ]},
-//             { content: 'item 4', val: 4 }
-//         ]}/>
 //
 //         <br/>
 //         <h2>Attach</h2>
