@@ -1,5 +1,9 @@
 block('select')(
     content()(function() {
+
+        // FIXME: it's should work fine!
+        return applyNext();
+
         const React = require('react');
         const Popup = require('../src/components/popup/popup');
 
@@ -7,7 +11,7 @@ block('select')(
             { elem : 'button' },
             <Popup
                 directions={['bottom-left', 'bottom-right', 'top-left', 'top-right']}
-                target='anchor',
+                target='anchor'
                 theme={this.mods.theme}
                 autoclosable={true}>
                 {{ block : this.block, mods : this.mods, elem : 'menu' }}

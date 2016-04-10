@@ -3,6 +3,7 @@ const ReactDom = require('react-dom');
 
 const Buttons = require('./components/buttons/buttons');
 const Checkboxes = require('./components/checkboxes/checkboxes');
+const CheckboxGroups = require('./components/checkbox-groups/checkbox-groups');
 const Dropdowns = require('./components/dropdowns/dropdowns');
 const Icons = require('./components/icons/icons');
 const Images = require('./components/images/images');
@@ -18,6 +19,7 @@ ReactDom.render(
     <main className='main'>
         <Buttons />
         <Checkboxes />
+        <CheckboxGroups />
         <Dropdowns />
         <Icons />
         <Images />
@@ -35,20 +37,11 @@ ReactDom.render(
 // TODO: refactor next like ./components/buttons
 
 // import { Select } from './react-components/select/select';
-// import { CheckboxGroup } from './react-components/checkbox-group/checkbox-group';
 // import { RadioGroup } from './react-components/radio-group/radio-group';
-// import { Menu } from './react-components/menu/menu';
 // import { Attach } from './react-components/attach/attach';
 
 // ReactDom.render(
-//     <main className='main'>
-//         <br/>
-//         <h2>Checkbox-Group</h2>
-//
-//         <CheckboxGroup theme='islands' size='m' options={[{ val: 1, text: 'option 1' }, { val: 2, text: 'option 2', disabled: true }]} val={[1]} />
-//         &nbsp;
-//         <CheckboxGroup theme='islands' size='l' options={[{ val: 1, text: 'option 1' }, { val: 2, text: 'option 2', disabled: true }]} val={[1]} />
-//
+//     <main className='main'>/
 //         <br/>
 //         <h2>Select</h2>
 //
