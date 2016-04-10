@@ -3,6 +3,7 @@ const ReactDom = require('react-dom');
 
 const Buttons = require('./components/buttons/buttons');
 const Checkboxes = require('./components/checkboxes/checkboxes');
+const Dropdowns = require('./components/dropdowns/dropdowns');
 const Icons = require('./components/icons/icons');
 const Images = require('./components/images/images');
 const Inputs = require('./components/inputs/inputs');
@@ -17,6 +18,7 @@ ReactDom.render(
     <main className='main'>
         <Buttons />
         <Checkboxes />
+        <Dropdowns />
         <Icons />
         <Images />
         <Inputs />
@@ -37,7 +39,6 @@ ReactDom.render(
 // import { RadioGroup } from './react-components/radio-group/radio-group';
 // import { Menu } from './react-components/menu/menu';
 // import { Attach } from './react-components/attach/attach';
-// import { Dropdown } from './react-components/dropdown/dropdown';
 
 // ReactDom.render(
 //     <main className='main'>
@@ -104,13 +105,6 @@ ReactDom.render(
 //             button='Size M'
 //             name='name-attach'
 //             noFileText='Нет файла? Есть BEM-XJST!!!'/>
-//
-//         <br/>
-//         <h2>Dropdown</h2>
-//
-//         <Dropdown theme='islands' size='m' type='link' switcher='olololo' popup='one' />
-//         &nbsp;
-//         <Dropdown theme='islands' size='m' type='button' switcher='olololo' popup='one' />
 //
 //     </main>,
 //     document.getElementById('root')

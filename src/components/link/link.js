@@ -20,7 +20,7 @@ module.exports = class Link extends Control {
     render() {
        return provide({
             block: this.bem.block,
-            attrs: {
+            attrs: Object.assign({
                 onMouseEnter: this._onMouseEnter.bind(this),
                 onMouseLeave: this._onMouseLeave.bind(this),
                 onFocus: this._onFocus.bind(this),
@@ -29,7 +29,7 @@ module.exports = class Link extends Control {
                 tabIndex: this.props.tabIndex,
                 'aria-disabled': this.props.disabled,
                 target: this.props.target
-            },
+            }, this.props.attrs),
             mods: {
                 size: this.props.size,
                 theme: this.props.theme,
@@ -38,6 +38,7 @@ module.exports = class Link extends Control {
                 hovered: this.state.hovered,
                 disabled: this.props.disabled
             },
+            mix: this.props.mix,
             url: this.props.url,
             content: this.props.children
         });

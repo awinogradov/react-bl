@@ -95,6 +95,7 @@ module.exports = class Button extends Control {
                 togglable: this.props.togglable,
                 disabled: this.props.disabled
             },
+            mix: this.props.mix,
             title: this.props.title,
             text: this.props.text,
             content: this.props.children
