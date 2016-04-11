@@ -1,7 +1,7 @@
-'use strict';
-
 block('link')(
     attrs()(function() {
+        'use strict';
+        
         const originalAttrs = applyNext();
 
         originalAttrs.tabIndex = originalAttrs.tabindex;

@@ -1,7 +1,7 @@
-'use strict';
-
 block('radio').mod('type', 'button')(
     content()(function() {
+        'use strict';
+        
         const React = require('react');
         const Button = require('../src/components/button/button');
 

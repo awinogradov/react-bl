@@ -1,7 +1,7 @@
-'use strict';
-
 block('radio-group')(
     content()(function() {
+        'use strict';
+        
         var mods = this.mods,
             ctx = this.ctx,
             isValDef = typeof ctx.val !== 'undefined';

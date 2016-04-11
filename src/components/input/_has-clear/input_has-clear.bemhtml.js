@@ -1,7 +1,7 @@
-'use strict';
-
 block('input').mod('has-clear', true).elem('box')(
     content()(function() {
+        'use strict';
+        
         const originalContent = applyNext();
 
         // extend input__clear by React bindings

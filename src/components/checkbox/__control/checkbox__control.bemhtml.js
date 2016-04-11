@@ -1,9 +1,7 @@
-'use strict';
-
 block('checkbox').elem('control')(
-    tag()('input'),
-
     attrs()(function() {
+        'use strict';
+        
         const originalAttrs = applyNext();
 
         originalAttrs.autoComplete = originalAttrs.autocomplete;

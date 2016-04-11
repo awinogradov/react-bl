@@ -1,6 +1,5 @@
-'use strict';
-
 block('dropdown').mod('switcher', 'link').elem('switcher').def()(function() {
+    'use strict';
 
     // FIXME: it's should work fine!
     return applyNext();
