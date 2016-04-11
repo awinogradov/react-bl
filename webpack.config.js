@@ -36,6 +36,9 @@ module.exports = {
                 }
             },
             techs: ['bemhtml'],
+            techExtensions: {
+                bemhtml: ['bemhtml', 'bemhtml.js'],
+            },
             levels: [
                 'bem-core/common.blocks',
                 'bem-core/desktop.blocks',
