@@ -12,6 +12,7 @@ module.exports = class CheckboxGroup extends BEM {
 
             },
             mods: {
+                type: this.props.type,
                 size: this.props.size,
                 theme: this.props.theme,
                 hovered: this.state.hovered,

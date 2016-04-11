@@ -1,23 +1,20 @@
-block('checkbox-group')(
+block('radio-group')(
     content()(function() {
         var mods = this.mods,
             ctx = this.ctx,
-            val = ctx.val,
-            isValDef = typeof val !== 'undefined';
+            isValDef = typeof ctx.val !== 'undefined';
 
         const React = require('react');
-        const Checkbox = require('../src/components/checkbox/checkbox');
-
-        if(isValDef && !Array.isArray(val)) throw Error('checkbox-group: val must be an array');
+        const Radio = require('../src/components/radio/radio');
 
         return (ctx.options || []).map(function(option, i) {
             return [
                 !!i && !mods.type && { tag : 'br' },
-                <Checkbox
+                <Radio
                     theme={mods.theme}
                     size={mods.size}
                     type={mods.type}
-                    checked={isValDef && val.indexOf(option.val) > -1}
+                    checked={isValDef && ctx.val === option.val}
                     disabled={option.disabled || mods.disabled}
                     name={ctx.name}
                     val={option.val}

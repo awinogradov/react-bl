@@ -11,6 +11,7 @@ const Inputs = require('./components/inputs/inputs');
 const Links = require('./components/links/links');
 const Menus = require('./components/menus/menus');
 const Progressbars = require('./components/progressbars/progressbars');
+const RadioGroups = require('./components/radio-groups/radio-groups');
 const Radios = require('./components/radios/radios');
 const Spins = require('./components/spins/spins');
 const Textareas = require('./components/textareas/textareas');
@@ -27,6 +28,7 @@ ReactDom.render(
         <Links />
         <Menus />
         <Progressbars />
+        <RadioGroups />
         <Radios />
         <Spins />
         <Textareas />
@@ -37,7 +39,6 @@ ReactDom.render(
 // TODO: refactor next like ./components/buttons
 
 // import { Select } from './react-components/select/select';
-// import { RadioGroup } from './react-components/radio-group/radio-group';
 // import { Attach } from './react-components/attach/attach';
 
 // ReactDom.render(
@@ -60,19 +61,7 @@ ReactDom.render(
 //         <Select theme='islands' size='l' mode='radio-check' text='Select L' options={[{ val: 1, text: 'option' }]} val={[1]} />
 //         &nbsp;
 //         <Select theme='islands' size='xl' mode='radio-check' text='Select XL' options={[{ val: 1, text: 'option' }]} val={[1]} />
-//
-//         <br/>
-//         <h2>Radio-Group</h2>
-//         <RadioGroup
-//             theme='islands'
-//             size='m'
-//             options={[
-//                 { val: 1, text: 'Футбол' },
-//                 { val: 2, text: 'Баскетбол' },
-//                 { val: 3, text: 'Гандбол' }
-//             ]}
-//             val={[1]} />
-//
+
 //         <br/>
 //         <h2>Attach</h2>
 //
