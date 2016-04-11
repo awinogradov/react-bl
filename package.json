@@ -12,8 +12,6 @@
     "bem-components": "git+ssh://git@github.com/awinogradov/bem-components.git#v2",
     "bem-core": "git+ssh://git@github.com/bem/bem-core.git#v2",
     "bem-xjst": "git+ssh://git@github.com:awinogradov/bem-xjst.git#feature/bemreact",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
     "react-xjst": "git+ssh://git@github.com/bem-contrib/react-xjst.git"
   },
   "author": "Anton Winogradov <winogradovaa@gmail.com>",
@@ -28,7 +26,13 @@
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "fs-extra": "^0.26.7",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
   }
 }
