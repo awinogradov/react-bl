@@ -1,7 +1,7 @@
-'use strict';
-
 block('checkbox-group')(
     content()(function() {
+        'use strict';
+        
         var mods = this.mods,
             ctx = this.ctx,
             val = ctx.val,

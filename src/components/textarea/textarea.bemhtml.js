@@ -1,5 +1,7 @@
 block('textarea')(
     attrs()(function() {
+        'use strict';
+        
         const originalAttrs = applyNext();
 
         originalAttrs.defaultValue = this.ctx.val;

@@ -1,7 +1,7 @@
-'use strict';
-
 block('input').elem('control')(
     attrs()(function() {
+        'use strict';
+        
         const originalAttrs = applyNext();
 
         originalAttrs.defaultValue = originalAttrs.value;

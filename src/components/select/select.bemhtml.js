@@ -1,6 +1,7 @@
 block('select')(
     content()(function() {
-
+        'use strict';
+        
         // FIXME: it's should work fine!
         return applyNext();
 
