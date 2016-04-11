@@ -1,3 +1,5 @@
+'use strict';
+
 const React = require('react');
 
 const BEM = require('../../core/bem/bem');

@@ -1,3 +1,5 @@
+'use strict';
+
 block('radio').elem('control')(
     tag()('input'),
 

@@ -1,3 +1,5 @@
+'use strict';
+
 const React = require('react');
 
 const Input = require('../input/input');

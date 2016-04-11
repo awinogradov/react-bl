@@ -1,3 +1,5 @@
+'use strict';
+
 const React = require('react');
 
 const Icon = require('../../../src').Icon;

@@ -1,3 +1,5 @@
+'use strict';
+
 block('input').mod('has-clear', true).elem('box')(
     content()(function() {
         const originalContent = applyNext();

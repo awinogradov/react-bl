@@ -1,3 +1,5 @@
+'use strict';
+
 block('menu')(
     attrs()(function() {
         const originalAttrs = applyNext();

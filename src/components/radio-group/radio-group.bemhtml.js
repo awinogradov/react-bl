@@ -1,3 +1,5 @@
+'use strict';
+
 block('radio-group')(
     content()(function() {
         var mods = this.mods,
