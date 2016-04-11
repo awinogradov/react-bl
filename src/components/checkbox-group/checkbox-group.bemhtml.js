@@ -1,3 +1,5 @@
+'use strict';
+
 block('checkbox-group')(
     content()(function() {
         var mods = this.mods,

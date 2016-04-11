@@ -1,3 +1,5 @@
+'use strict';
+
 block('checkbox').elem('control')(
     tag()('input'),
 

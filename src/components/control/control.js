@@ -1,3 +1,5 @@
+'use strict';
+
 const React = require('react');
 const Component = React.Component;
 const PropTypes = React.PropTypes;
