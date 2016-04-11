@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "STANDALONE=1 webpack",
-    "postinstall": "cd ./node_modules/bem-xjst && npm run make && cd .. && cd .. && npm run build"
+    "postinstall": "cd ./node_modules/bem-xjst && npm run make && cd ../.. && npm run build"
   },
   "dependencies": {
     "bem-cn": "^1.2.2",
@@ -14,8 +14,6 @@
     "bem-naming": "^1.0.1",
     "bem-xjst": "git+ssh://git@github.com:awinogradov/bem-xjst.git#feature/bemreact",
     "param-case": "^1.1.2",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
     "react-xjst": "git+ssh://git@github.com/bem-contrib/react-xjst.git"
   },
   "author": "Anton Winogradov <winogradovaa@gmail.com>",
@@ -30,6 +28,13 @@
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "fs-extra": "^0.26.7",
-    "url-loader": "^0.5.7"
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
   }
 }
