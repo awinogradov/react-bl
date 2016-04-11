@@ -11,7 +11,7 @@ block('select')(
             { elem : 'button' },
             React.createElement(Popup, {
                 direction: ['bottom-left', 'bottom-right', 'top-left', 'top-right'],
-                targe: 'anchor',
+                target: 'anchor',
                 theme: this.mods.theme,
                 autoclosable: true
             }, { block: this.block, mods: this.mods, elem: 'menu' })
