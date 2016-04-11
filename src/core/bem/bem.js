@@ -1,3 +1,5 @@
+'use strict';
+
 const React = require('react');
 const Component = React.Component;
 const block = require('bem-cn');
@@ -8,7 +10,7 @@ module.exports = class BEM extends Component {
 
     constructor(props) {
         super(props);
-        
+
         this.state = {};
         this.bem = this.bem || {};
 
