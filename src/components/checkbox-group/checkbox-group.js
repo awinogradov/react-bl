@@ -1,36 +1,24 @@
 const React = require('react');
+
+const BEM = require('../../core/bem/bem');
 const provide = require('../../provider/provider');
 
-module.exports = class CheckboxGroup extends React.Component {
-
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            hovered: false,
-            focused: false
-        };
-    }
+module.exports = class CheckboxGroup extends BEM {
 
     render() {
         return provide({
-            block: 'checkbox-group',
+            block: this.bem.block,
             attrs: {
-                onMouseEnter: () => (this.setState({ hovered: true })),
-                onFocus: () => (this.setState({ focused: true })),
-                onMouseLeave: () => (this.setState({ hovered: false })),
-                onBlur: () => (this.setState({ focused: false }))
+
             },
             mods: {
-                mode: this.props.mode,
                 size: this.props.size,
                 theme: this.props.theme,
                 hovered: this.state.hovered,
                 focused: this.state.focused,
                 disabled: this.props.disabled
             },
-            id: this.props.id,
             name: this.props.name,
-            text: this.props.text,
             val: this.props.val,
             options: this.props.options
         });

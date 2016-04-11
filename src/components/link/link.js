@@ -1,82 +1,46 @@
 const React = require('react');
+
+const Control = require('../control/control');
 const provide = require('../../provider/provider');
 
-module.exports = class Link extends React.Component {
+module.exports = class Link extends Control {
 
     constructor(props, context) {
         super(props, context);
-        this.state = {
-            hovered: false,
-            focused: false,
-        };
-        this.handleClick = this.handleClick.bind(this);
-        this.handleFocus = this.handleFocus.bind(this);
-        this.handleBlur = this.handleBlur.bind(this);
-        this.handleMouseEnter = this.handleMouseEnter.bind(this);
-        this.handleMouseLeave = this.handleMouseLeave.bind(this);
+    }
+
+    _onClick(e) {
+        if(this.props.disabled || this.props.pseudo) {
+            e.preventDefault();
+        }
+
+        this.props.onClick && this.onClick(e, this.state);
     }
 
     render() {
        return provide({
-            block: 'link',
-            content: this.props.children,
-            attrs: {
+            block: this.bem.block,
+            attrs: Object.assign({
+                onMouseEnter: this._onMouseEnter.bind(this),
+                onMouseLeave: this._onMouseLeave.bind(this),
+                onFocus: this._onFocus.bind(this),
+                onBlur: this._onBlur.bind(this),
+                onClick: this._onClick.bind(this),
                 tabIndex: this.props.tabIndex,
-                onClick: this.handleClick,
-                onFocus: this.handleFocus,
-                onBlur: this.handleBlur,
-                onMouseEnter: this.handleMouseEnter,
-                onMouseLeave: this.handleMouseLeave,
-            },
+                'aria-disabled': this.props.disabled,
+                target: this.props.target
+            }, this.props.attrs),
             mods: {
                 size: this.props.size,
                 theme: this.props.theme,
-                disabled: this.props.disabled,
                 pseudo: this.props.pseudo,
                 focused: this.state.focused,
-                hovered: this.state.hovered
-            }
+                hovered: this.state.hovered,
+                disabled: this.props.disabled
+            },
+            mix: this.props.mix,
+            url: this.props.url,
+            content: this.props.children
         });
-    }
-
-    handleClick(e) {
-        if (!!this.props.pseudo) {
-            e.preventDefault();
-        }
-        if (this.props.onClick) {
-            this.props.onClick();
-        }
-    }
-
-    handleFocus() {
-        this.setState({ focused: true });
-
-        if (this.props.onFocus) {
-            this.props.onFocus();
-        }
-    }
-
-    handleBlur() {
-        this.setState({ focused: false });
-
-        if (this.props.onBlur) {
-            this.props.onBlur();
-        }
-    }
-
-    handleMouseEnter() {
-        this.setState({ hovered: true });
-
-        if (this.props.onMouseEnter) {
-            this.props.onMouseEnter();
-        }
-    }
-
-    handleMouseLeave() {
-        this.setState({ hovered: false });
-
-        if (this.props.onMouseLeave) {
-            this.props.onMouseLeave();
-        }
     }
 }

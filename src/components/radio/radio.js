@@ -1,43 +1,52 @@
 const React = require('react');
+
+const Control = require('../control/control');
 const provide = require('../../provider/provider');
 
-module.exports = class Radio extends React.Component {
+module.exports = class Radio extends Control {
 
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            hovered: false,
-            focused: false,
-            value: ''
-        };
+    _onChange() {
+        this.props.disabled || this.setStateAndMod({checked: true});
+
+        this.props.onChange && this.props.onChange(e, this.state);
+    }
+
+    componentWillMount() {
+        this.state.checked = this.props.checked;
     }
 
     render() {
-        let val = this.state.value || this.props.val;
         return provide({
-            block: 'radio',
+            block: this.bem.block,
             attrs: {
-                onMouseEnter: () => (this.setState({ hovered: true })),
-                onFocus: () => (this.setState({ focused: true })),
-                onMouseLeave: () => (this.setState({ hovered: false })),
-                onBlur: () => (this.setState({ focused: false })),
-                onClick: () => (this.setState({ checked: true }))
+                onMouseEnter: this._onMouseEnter.bind(this),
+                onMouseLeave: this._onMouseLeave.bind(this),
+                onFocus: this._onFocus.bind(this),
+                onBlur: this._onBlur.bind(this),
+                onChange: this._onChange.bind(this)
+            },
+            attrs: {
+                onMouseEnter: this._onMouseEnter.bind(this),
+                onMouseLeave: this._onMouseLeave.bind(this),
+                onFocus: this._onFocus.bind(this),
+                onBlur: this._onBlur.bind(this),
+                onChange: this._onChange.bind(this)
             },
             mods: {
                 size: this.props.size,
                 theme: this.props.theme,
-                view: this.props.view,
+                type: this.props.type,
+                checked: this.state.checked,
                 hovered: this.state.hovered,
                 focused: this.state.focused,
-                checked: this.state.checked,
-                type: this.props.type
+                disabled: this.props.disabled
             },
-            val: val,
+            val: this.props.val,
             name: this.props.name,
-            text: this.props.text,
-            icon: this.props.icon,
+            tabIndex: this.props.tabIndex,
             title: this.props.title,
-            content: this.props.children
+            icon: this.props.icon,
+            text: this.props.text
         });
     }
 }

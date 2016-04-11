@@ -1,35 +1,33 @@
 const React = require('react');
+
+const Control = require('../control/control');
 const provide = require('../../provider/provider');
 
-module.exports = class Input extends React.Component {
+module.exports = class Input extends Control {
 
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            hovered: false,
-            focused: false,
-            value: '',
-        };
+    _onChange() {
+        this.props.onChange && this.props.onChange(e, this.state);
+    }
 
-        this.handleChange = this.handleChange.bind(this);
+    _onClearClick() {
+        console.log('hi there');
+    }
+
+    componentWillMount() {
+        this.state.val = this.props.val;
     }
 
     render() {
-        let val = this.state.value || this.props.val;
         return provide({
-            block: 'input',
+            block: this.bem.block,
             attrs: {
-                onMouseEnter: () => (this.setState({ hovered: true })),
-                onFocus: () => (this.setState({ focused: true })),
-                onMouseLeave: () => (this.setState({ hovered: false })),
-                onBlur: () => (this.setState({ focused: false })),
-                onChange: this.handleChange,
-                // onKeyDown: this.handleKeyDown,
-                // onKeyUp: this.handleKeyUp,
+                onMouseEnter: this._onMouseEnter.bind(this),
+                onMouseLeave: this._onMouseLeave.bind(this),
+                onFocus: this._onFocus.bind(this),
+                onBlur: this._onBlur.bind(this),
+                onChange: this._onChange.bind(this),
+                onClearClick: this._onClearClick.bind(this)
             },
-            val: val,
-            id: this.props.id,
-            name: this.props.name,
             mods: {
                 size: this.props.size,
                 theme: this.props.theme,
@@ -37,13 +35,12 @@ module.exports = class Input extends React.Component {
                 focused: this.state.focused,
                 'has-clear': this.props.hasClear,
                 disabled: this.props.disabled
-            }
+            },
+            id: this.props.id,
+            tabIndex: this.props.tabIndex,
+            name: this.props.name,
+            placeholder: this.props.placeholder,
+            val: this.state.val
         });
-    }
-
-    handleChange(e) {
-        let value = e.target.value;
-
-        this.setState({ value });
     }
 }

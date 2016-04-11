@@ -1,41 +1,46 @@
 const React = require('react');
+
+const Control = require('../control/control');
 const provide = require('../../provider/provider');
 
-module.exports = class Checkbox extends React.Component {
+module.exports = class Checkbox extends Control {
 
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            hovered: false,
-            focused: false,
-            value: ''
-        };
+    _onChange() {
+        this.setStateAndMod({checked: !this.state.checked});
+
+        this.props.onChange && this.props.onChange(e, this.state);
+    }
+
+    componentWillMount() {
+        this.state.checked = this.props.checked;
     }
 
     render() {
-        let val = this.state.value || this.props.val;
         return provide({
-            block: 'checkbox',
+            block: this.bem.block,
             attrs: {
-                onMouseEnter: () => (this.setState({ hovered: true })),
-                onFocus: () => (this.setState({ focused: true })),
-                onMouseLeave: () => (this.setState({ hovered: false })),
-                onBlur: () => (this.setState({ focused: false })),
-                onClick: () => (this.setState({ checked: true }))
+                onMouseEnter: this._onMouseEnter.bind(this),
+                onMouseLeave: this._onMouseLeave.bind(this),
+                onFocus: this._onFocus.bind(this),
+                onBlur: this._onBlur.bind(this),
+                onChange: this._onChange.bind(this)
             },
             mods: {
                 size: this.props.size,
                 theme: this.props.theme,
                 type: this.props.type,
-                checked: this.state.checked || this.props.checked,
+                checked: this.state.checked,
                 hovered: this.state.hovered,
                 focused: this.state.focused,
                 disabled: this.props.disabled
             },
             id: this.props.id,
             name: this.props.name,
-            val: val,
-            text: this.props.text
+            tabIndex: this.props.tabIndex,
+            title: this.props.title,
+            icon: this.props.icon,
+            text: this.props.text,
+            val: this.props.val
         });
     }
 }

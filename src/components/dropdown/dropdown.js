@@ -1,20 +1,21 @@
 const React = require('react');
+
+const BEM = require('../../core/bem/bem');
 const provide = require('../../provider/provider');
 
-module.exports = class Dropdown extends React.Component {
+module.exports = class Dropdown extends BEM {
 
-    constructor(props, context) {
-        super(props, context);
+    _onSwitcherClick() {
+        this.setStateAndMod({opened: true});
+        this.props.onSwitcherClick && this.props.onSwitcherClick();
     }
 
     render() {
         return provide({
-            block: 'dropdown',
+            block: this.bem.block,
             attrs: {
-                onMouseEnter: () => (this.setState({ hovered: true })),
-                onFocus: () => (this.setState({ focused: true })),
-                onMouseLeave: () => (this.setState({ hovered: false })),
-                onBlur: () => (this.setState({ focused: false }))
+                'aria-expanded': this.props.opened,
+                onClick: this._onSwitcherClick
             },
             mods: {
                 size: this.props.size,
