@@ -1,35 +1,27 @@
 const React = require('react');
+
+const BEM = require('../../core/bem/bem');
 const provide = require('../../provider/provider');
 
-module.exports = class RadioGroup extends React.Component {
-
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            focused: false,
-            value: ''
-        };
-    }
+module.exports = class RadioGroup extends BEM {
 
     render() {
-        let val = this.state.value || this.props.val;
         return provide({
-            block: 'radio-group',
+            block: this.bem.block,
             attrs: {
-                onFocus: () => (this.setState({ focused: true })),
-                onBlur: () => (this.setState({ focused: false })),
-                onClick: () => (this.setState({ checked: true }))
+
             },
             mods: {
+                type: this.props.type,
                 size: this.props.size,
                 theme: this.props.theme,
+                hovered: this.state.hovered,
                 focused: this.state.focused,
-                desabled: this.props.disabled,
-                type: this.props.type
+                disabled: this.props.disabled
             },
-            options: this.props.options,
-            val: val,
-            name: this.props.name
+            name: this.props.name,
+            val: this.props.val,
+            options: this.props.options
         });
     }
 }
