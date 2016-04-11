@@ -51,14 +51,8 @@ module.exports = {
         new CollectBemAssetsPlugin({
             done: function(data) {
                 bemLoader.setStylesData(data['styl']);
-                fs.outputFileSync(
-                    './dist/templates.js',
-                    bemxjst.vidom.generate(
-                        bemLoader.generateBemHtml(data.bemhtml)
-                    )
-                );
             },
-            techs: ['bemhtml', 'styl'],
+            techs: ['styl'],
             levels: [
                 'bem-components/design/common.blocks',
                 'bem-components/design/desktop.blocks'
