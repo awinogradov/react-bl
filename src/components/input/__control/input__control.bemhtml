@@ -1,6 +1,4 @@
 block('input').elem('control')(
-    tag()('input'),
-
     attrs()(function() {
         const originalAttrs = applyNext();
 

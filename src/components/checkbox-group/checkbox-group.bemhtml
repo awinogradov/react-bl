@@ -13,17 +13,18 @@ block('checkbox-group')(
         return (ctx.options || []).map(function(option, i) {
             return [
                 !!i && !mods.type && { tag : 'br' },
-                <Checkbox
-                    theme={mods.theme}
-                    size={mods.size}
-                    type={mods.type}
-                    checked={isValDef && val.indexOf(option.val) > -1}
-                    disabled={option.disabled || mods.disabled}
-                    name={ctx.name}
-                    val={option.val}
-                    text={option.text}
-                    title={option.title}
-                    icon={option.icon} />
+                React.createElement(Checkbox, {
+                    theme: mods.theme,
+                    size: mods.size,
+                    type: mods.type,
+                    checked: isValDef && val.indexOf(option.val) > -1,
+                    disabled: option.disabled || mods.disabled,
+                    name: ctx.name,
+                    val: option.val,
+                    text: option.text,
+                    title: option.title,
+                    icon: option.icon
+                })
             ];
         });
     })

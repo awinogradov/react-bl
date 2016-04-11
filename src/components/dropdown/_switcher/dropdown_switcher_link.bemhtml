@@ -12,17 +12,16 @@ block('dropdown').mod('switcher', 'link').elem('switcher').def()(function() {
 
     let dropdownMods = this.mods;
     return this.isSimple(switcher) ?
-        applyCtx(<Link
-            theme={dropdownMods.theme}
-            pseudo={true}
-            attrs={{
+        applyCtx(React.createElement(Link, {
+            theme: dropdownMods.theme,
+            pseudo: true,
+            attrs: {
                 'aria-haspopup': true,
                 'aria-controls': this._popupId,
                 'aria-expanded': false
-            }}
-            disabled={dropdownMods.disabled}
-            mix={apply('mix')}>
-                {switcher}
-            </Link>) :
+            },
+            disabled: dropdownMods.disabled,
+            mix: apply('mix')
+        }, switcher)) :
         applyCtx(switcher);
 });
