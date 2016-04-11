@@ -6,7 +6,7 @@ block('select')(
         return applyNext();
 
         const React = require('react');
-        const Popup = require('../src/components/popup/popup');
+        const Popup = require('../src/components/popup/popup.jsx');
 
         return [
             { elem : 'button' },

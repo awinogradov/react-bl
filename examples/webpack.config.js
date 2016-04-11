@@ -24,7 +24,7 @@ fs.outputFile(
 );
 
 module.exports = {
-    entry: './index.js',
+    entry: './index.jsx',
     module: {
         loaders: [
             {
@@ -74,7 +74,8 @@ module.exports = {
             techs: ['styl'],
             levels: [
                 'bem-components/design/common.blocks',
-                'bem-components/design/desktop.blocks'
+                'bem-components/design/desktop.blocks',
+                'bem-components/common.blocks',
             ].map(function(short) {
                 return path.resolve(process.cwd(), `./node_modules/${short}`);
             }).concat([

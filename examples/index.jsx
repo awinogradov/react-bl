@@ -1,7 +1,5 @@
-'use strict';
-
 const React = require('react');
-const ReactDom = require('react-dom');
+const ReactDOM = require('react-dom');
 
 const Buttons = require('./components/buttons/buttons');
 const Checkboxes = require('./components/checkboxes/checkboxes');
@@ -17,8 +15,9 @@ const RadioGroups = require('./components/radio-groups/radio-groups');
 const Radios = require('./components/radios/radios');
 const Spins = require('./components/spins/spins');
 const Textareas = require('./components/textareas/textareas');
+const Popups = require('./components/popups/popups.jsx');
 
-ReactDom.render(
+ReactDOM.render(
     <main className='main'>
         <Buttons />
         <Checkboxes />
@@ -34,6 +33,7 @@ ReactDom.render(
         <Radios />
         <Spins />
         <Textareas />
+        <Popups />
     </main>,
     document.getElementById('root')
 );
