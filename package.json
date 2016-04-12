@@ -5,6 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "STANDALONE=1 webpack",
+    "predeploy": "cd examples && npm i && npm run build",
+    "deploy": "gh-pages -d examples/dist",
     "postinstall": "cd ./node_modules/bem-xjst && npm run make && cd ../.. && npm run build"
   },
   "dependencies": {
@@ -28,6 +30,7 @@
   "license": "MIT",
   "devDependencies": {
     "file-loader": "^0.8.5",
+    "gh-pages": "^0.11.0",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "url-loader": "^0.5.7"
