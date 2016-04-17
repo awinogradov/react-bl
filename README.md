@@ -1,4 +1,4 @@
-# react-components
+# react-bl
 
 Powerful React components which uses XJST. Wtf? [Russian](https://github.com/bem/bem-forum-content-ru/issues/961)
 
