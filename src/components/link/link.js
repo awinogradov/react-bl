@@ -16,7 +16,7 @@ module.exports = class Link extends Control {
             e.preventDefault();
         }
 
-        this.props.onClick && this.onClick(e, this.state);
+        this.props.onClick && this.props.onClick(e, this.state);
     }
 
     render() {

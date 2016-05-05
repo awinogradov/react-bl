@@ -38,7 +38,7 @@ module.exports = class Button extends Control {
 
     _onClick(e) {
         if(!this.props.disabled) {
-            this.props.onClick && this.onClick(e, this.state);
+            this.props.onClick && this.props.onClick(e, this.state);
         }
     }
 
