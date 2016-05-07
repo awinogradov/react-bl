@@ -17,7 +17,6 @@ const provide = require('../../provider/provider');
 const ZINDEX_FACTOR = 1000;
 const visiblePopupsZIndexes = {};
 
-const RenderInBody = require('../render-in-body/render-in-body.jsx');
 const calcBestDrawingParams = require('./calc-drawing-params').calcBestDrawingParams;
 const isEventOutsideClientBounds = require('../../lib/window').isEventOutsideClientBounds;
 
@@ -58,6 +57,9 @@ module.exports = class Popup extends BEM {
         this.handleWindowClick = this.handleWindowClick.bind(this);
 
         this.redraw = this.redraw.bind(this);
+
+        this._popupContainerElement = document.createElement('div');
+        document.body.appendChild(this._popupContainerElement);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -71,6 +73,9 @@ module.exports = class Popup extends BEM {
     }
 
     componentWillUnmount() {
+        ReactDOM.unmountComponentAtNode(this._popupContainerElement);
+        document.body.removeChild(this._popupContainerElement);
+
         this.props.autoclosable && this.ensureClickEvent(true);
     }
 
@@ -87,45 +92,47 @@ module.exports = class Popup extends BEM {
     }
 
     render() {
-        return (
-            <RenderInBody>
-                {
-                    provide({
-                        block: 'popup',
-                        attrs: {
-                            className: this.props.className,
-                            'aria-hidden': !this.state.visible,
-                            style: `top: ${this.state.styles.top}; left: ${this.state.styles.left}`,
-                            onMouseEnter: this.handleMouseEnter,
-                            onMouseLeave: this.handleMouseLeave,
-                            ref: (popup) => {
-                                this._popup = popup;
-                            }
-                        },
-                        mods: {
-                            theme: this.props.theme,
-                            autoclosable: !!this.props.autoclosable,
-                            target: this.props.target,
-                            size: this.props.size,
-                            visible: this.props.visible,
-                            invalid: this.props.invalid,
-                            type: (this.props.target === 'anchor') && (this.props.type === 'tooltip') && this.props.type,
-                            height: this.props.height,
-                            direction: this.state.direction,
-                        },
-                        directions: [this.state.direction],
-                        mainOffset: this.props.mainOffset,
-                        secondaryOffset: this.props.secondaryOffset,
-                        viewportOffset: this.props.viewportOffset,
-                        // zIndexGroupLevel: this.props.zIndexGroupLevel,
-                        content: [
-                            this.props.children,
-                        { /*<ResizeSensor onResize={ !!this.state.styles && this.redraw } /> */ }
-                        ],
-                    })
+        var popup = provide({
+            block: 'popup',
+            attrs: {
+                className: this.props.className,
+                'aria-hidden': !this.state.visible,
+                style: `top: ${this.state.styles.top}; left: ${this.state.styles.left}`,
+                onMouseEnter: this.handleMouseEnter,
+                onMouseLeave: this.handleMouseLeave,
+                ref: (popup) => {
+                    this._popup = popup;
                 }
-            </RenderInBody>
+            },
+            mods: {
+                theme: this.props.theme,
+                autoclosable: !!this.props.autoclosable,
+                target: this.props.target,
+                size: this.props.size,
+                visible: this.props.visible,
+                invalid: this.props.invalid,
+                type: (this.props.target === 'anchor') && (this.props.type === 'tooltip') && this.props.type,
+                height: this.props.height,
+                direction: this.state.direction,
+            },
+            directions: [this.state.direction],
+            mainOffset: this.props.mainOffset,
+            secondaryOffset: this.props.secondaryOffset,
+            viewportOffset: this.props.viewportOffset,
+            // zIndexGroupLevel: this.props.zIndexGroupLevel,
+            content: [
+                this.props.children,
+            { /*<ResizeSensor onResize={ !!this.state.styles && this.redraw } /> */ }
+            ],
+        });
+
+        ReactDOM.unstable_renderSubtreeIntoContainer(
+            this,
+            popup,
+            this._popupContainerElement
         );
+
+        return React.createElement('div');
     }
 
     handleMouseEnter() {
