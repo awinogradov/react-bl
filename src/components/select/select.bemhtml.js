@@ -1,12 +1,12 @@
 block('select')(
     content()(function() {
         'use strict';
-        
+
         // FIXME: it's should work fine!
         return applyNext();
 
         const React = require('react');
-        const Popup = require('../src/components/popup/popup.jsx');
+        const Popup = require('../src/components/popup/popup.js');
 
         return [
             { elem : 'button' },

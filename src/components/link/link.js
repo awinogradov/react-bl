@@ -33,7 +33,7 @@ module.exports = class Link extends Control {
                 target: this.props.target
             }, this.props.attrs),
             mods: {
-                size: this.props.size || 'm',
+                size: this.props.size,
                 theme: this.props.theme,
                 pseudo: this.props.pseudo,
                 focused: this.state.focused,
