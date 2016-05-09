@@ -16,7 +16,7 @@
     "bem-naming": "^1.0.1",
     "bem-xjst": "git+ssh://git@github.com:awinogradov/bem-xjst.git#feature/bemreact",
     "bem-loader": "^0.5.0",
-    "browserify": "^13.0.0",
+    "browserify": "^13.0.1",
     "param-case": "^1.1.2",
     "react-xjst": "git+ssh://git@github.com/bem-contrib/react-xjst.git",
     "babel-core": "^6.5.1",
