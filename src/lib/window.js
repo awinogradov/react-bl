@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Check that mouse was outside `e`
  * @param {Object} e - MouseEvent
