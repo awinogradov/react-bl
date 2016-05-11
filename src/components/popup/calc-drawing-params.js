@@ -1,3 +1,4 @@
+'use strict';
 /**
  * based on https://github.com/bem/bem-components/blob/v2/common.blocks/popup/_target/popup_target.js
  */
