@@ -21,7 +21,7 @@
     "react-xjst": "git+ssh://git@github.com/bem-contrib/react-xjst.git",
     "babel-core": "^6.5.1",
     "babel-loader": "^6.2.2",
-    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
     "webpack": "^1.13.0",
     "fs-extra": "^0.26.7"
