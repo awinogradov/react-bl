@@ -13,8 +13,6 @@
     "bem-components": "git+ssh://git@github.com/awinogradov/bem-components.git#v2",
     "bem-core": "git+ssh://git@github.com/bem/bem-core.git#v2",
     "bem-xjst": "git+ssh://git@github.com:awinogradov/bem-xjst.git#feature/bemreact",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
     "react-xjst": "git+ssh://git@github.com/bem-contrib/react-xjst.git"
   },
   "author": "Anton Winogradov <winogradovaa@gmail.com>",

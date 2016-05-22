@@ -3,7 +3,7 @@
 const React = require('react');
 
 const Icon = require('../../../src').Icon;
-require('../../design/icon/icon.styl');
+require('./icons.styl');
 
 module.exports = class Icons extends React.Component {
 
