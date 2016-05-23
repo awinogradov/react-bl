@@ -5,7 +5,7 @@ const Buttons = require('./components/buttons/buttons');
 const Checkboxes = require('./components/checkboxes/checkboxes');
 const CheckboxGroups = require('./components/checkbox-groups/checkbox-groups');
 const Dropdowns = require('./components/dropdowns/dropdowns');
-const Icons = require('./components/icons/icons');
+const Icons = require('./components/icons/icons.jsx');
 const Images = require('./components/images/images');
 const Inputs = require('./components/inputs/inputs');
 const Links = require('./components/links/links');
@@ -16,6 +16,7 @@ const Radios = require('./components/radios/radios');
 const Spins = require('./components/spins/spins');
 const Textareas = require('./components/textareas/textareas');
 const Popups = require('./components/popups/popups.jsx');
+const Selects = require('./components/selects/selects.jsx');
 
 ReactDOM.render(
     <main className='main'>
@@ -34,6 +35,7 @@ ReactDOM.render(
         <Spins />
         <Textareas />
         <Popups />
+        <Selects />
     </main>,
     document.getElementById('root')
 );

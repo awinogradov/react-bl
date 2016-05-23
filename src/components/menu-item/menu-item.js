@@ -21,7 +21,7 @@ module.exports = class MenuItem extends BEM {
 
     _onClick(e) {
         if(!this.props.disabled) {
-            this.props.onClick && this.props.onClick(e, this.state);
+            this.props.onClick && this.props.onClick(e, this.state.val);
         }
     }
 

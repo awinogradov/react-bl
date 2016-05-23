@@ -13,6 +13,8 @@ class Menu extends Control {
             attrs: {
                 onMouseEnter: this._onMouseEnter.bind(this),
                 onMouseLeave: this._onMouseLeave.bind(this),
+                // TODO
+                onKeyDown: this.handleKeyDown.bind(this),
                 onFocus: this._onFocus.bind(this),
                 onBlur: this._onBlur.bind(this)
             },
@@ -24,9 +26,16 @@ class Menu extends Control {
                 focused: this.state.focused,
                 disabled: this.props.disabled
             },
+            mix: this.props.mix,
             val: this.state.value,
             content: this.props.children
         });
+    }
+
+    handleKeyDown(e) {
+        if (this.props.onKeyDown) {
+            this.props.onKeyDown(e);
+        }
     }
 }
 
