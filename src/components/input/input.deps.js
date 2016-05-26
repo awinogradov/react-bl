@@ -1,8 +1,8 @@
 ({
+    mustDeps: [
+      { block: 'control' }
+    ],
     shouldDeps: [
-        {
-            mods: { 'has-clear': true },
-            elems: ['clear']
-        }
+      { mods: { 'has-clear': true }, elems: 'clear' }
     ]
 });
