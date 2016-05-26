@@ -2,40 +2,25 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 
 const Buttons = require('./components/buttons/buttons');
-const Checkboxes = require('./components/checkboxes/checkboxes');
-const CheckboxGroups = require('./components/checkbox-groups/checkbox-groups');
-const Dropdowns = require('./components/dropdowns/dropdowns');
-const Icons = require('./components/icons/icons.jsx');
-const Images = require('./components/images/images');
-const Inputs = require('./components/inputs/inputs');
-const Links = require('./components/links/links');
-const Menus = require('./components/menus/menus');
-const Progressbars = require('./components/progressbars/progressbars');
-const RadioGroups = require('./components/radio-groups/radio-groups');
-const Radios = require('./components/radios/radios');
-const Spins = require('./components/spins/spins');
-const Textareas = require('./components/textareas/textareas');
-const Popups = require('./components/popups/popups.jsx');
-const Selects = require('./components/selects/selects.jsx');
+// const Checkboxes = require('./components/checkboxes/checkboxes');
+// const CheckboxGroups = require('./components/checkbox-groups/checkbox-groups');
+// const Dropdowns = require('./components/dropdowns/dropdowns');
+// const Icons = require('./components/icons/icons.jsx');
+// const Images = require('./components/images/images');
+// const Inputs = require('./components/inputs/inputs');
+// const Links = require('./components/links/links');
+// const Menus = require('./components/menus/menus');
+// const Progressbars = require('./components/progressbars/progressbars');
+// const RadioGroups = require('./components/radio-groups/radio-groups');
+// const Radios = require('./components/radios/radios');
+// const Spins = require('./components/spins/spins');
+// const Textareas = require('./components/textareas/textareas');
+// const Popups = require('./components/popups/popups.jsx');
+// const Selects = require('./components/selects/selects.jsx');
 
 ReactDOM.render(
     <main className='main'>
         <Buttons />
-        <Checkboxes />
-        <CheckboxGroups />
-        <Dropdowns />
-        <Icons />
-        <Images />
-        <Inputs />
-        <Links />
-        <Menus />
-        <Progressbars />
-        <RadioGroups />
-        <Radios />
-        <Spins />
-        <Textareas />
-        <Popups />
-        <Selects />
     </main>,
     document.getElementById('root')
 );
