@@ -12,21 +12,21 @@ module.exports = class Inputs extends React.Component {
             <div className='inputs'>
                 <h2>Inputs</h2>
 
-                <Input theme='islands' size='s' val='Size S' />
-                <Input theme='islands' size='s' val='Size S' disabled={true} />
+                <Input theme='islands' size='s' placeholder='Size S' tabIndex='2' />
+                <Input theme='islands' size='s' placeholder='Size S' disabled={true} />
                 &nbsp;
                 <br/>
-                <Input theme='islands' size='m' val='Size M' />
+                <Input theme='islands' size='m' placeholder='Size M' tabIndex='1' />
                 &nbsp;
-                <Input theme='islands' size='m' val='Size M' disabled={true} />
+                <Input theme='islands' size='m' placeholder='Size M' disabled={true} />
                 <br/>
-                <Input theme='islands' size='l' val='Size L' />
+                <Input theme='islands' size='l' placeholder='Size L' />
                 &nbsp;
-                <Input theme='islands' size='l' val='Size L' disabled={true} />
+                <Input theme='islands' size='l' placeholder='Size L' disabled={true} />
                 <br/>
-                <Input theme='islands' size='xl' val='Size XL' />
+                <Input theme='islands' size='xl' placeholder='Size XL' />
                 &nbsp;
-                <Input theme='islands' size='xl' val='Size XL' disabled={true} />
+                <Input theme='islands' size='xl' placeholder='Size XL' disabled={true} />
                 <br/>
                 <Input theme='islands' size='xl' val='Size XL' hasClear={true} />
             </div>

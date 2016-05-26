@@ -7,7 +7,7 @@ const Buttons = require('./components/buttons/buttons');
 // const Dropdowns = require('./components/dropdowns/dropdowns');
 // const Icons = require('./components/icons/icons.jsx');
 // const Images = require('./components/images/images');
-// const Inputs = require('./components/inputs/inputs');
+const Inputs = require('./components/inputs/inputs');
 // const Links = require('./components/links/links');
 // const Menus = require('./components/menus/menus');
 // const Progressbars = require('./components/progressbars/progressbars');
@@ -21,6 +21,7 @@ const Buttons = require('./components/buttons/buttons');
 ReactDOM.render(
     <main className='main'>
         <Buttons />
+        <Inputs />
     </main>,
     document.getElementById('root')
 );

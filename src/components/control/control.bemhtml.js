@@ -18,7 +18,6 @@ oninit(function(exports, shared) {
         _onFocus () {
             if (this.state.mods.disabled) return;
             this.setMod('focused', true);
-            this.setMod('focused-hard', true); // just for test with button
             this.refs.control.addEventListener('blur', this._onBlur);
         }
 
@@ -35,7 +34,6 @@ oninit(function(exports, shared) {
     
         _onBlur () {
             this.setMod('focused', false);
-            this.setMod('focused-hard', false);
             this.setMod('hovered', false);
             this.refs.control.removeEventListener('blur', this._onBlur);
         }

@@ -6,7 +6,7 @@ const Button = require('./components/button/button');
 // const Dropdown = require('./components/dropdown/dropdown');
 // const Icon = require('./components/icon/icon');
 // const Image = require('./components/image/image');
-// const Input = require('./components/input/input');
+const Input = require('./components/input/input');
 // const Link = require('./components/link/link');
 // const Menu = require('./components/menu/menu');
 // const MenuItem = require('./components/menu-item/menu-item');
@@ -28,7 +28,7 @@ module.exports = {
     // Dropdown,
     // Icon,
     // Image,
-    // Input,
+    Input,
     // Link,
     // Menu,
     // MenuItem,
