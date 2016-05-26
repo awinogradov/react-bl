@@ -35,6 +35,10 @@ module.exports = class Buttons extends React.Component {
                 <Button theme='islands' size='xl' text='Size XL' disabled={true} />
                 &nbsp;
                 <Button theme='islands' size='xl' text='Size XL' view='action' />
+                <br/>
+                <Button theme='islands' size='xl' text='Check' togglable='check' />
+                &nbsp;
+                <Button theme='islands' size='xl' text='Radio' togglable='radio' />
             </div>
         );
     }

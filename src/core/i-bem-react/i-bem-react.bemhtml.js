@@ -2,7 +2,8 @@ oninit(function(exports, shared) {
     // TODO: explore better require
     const React = shared.React = require('react');
     const ReactDOM = shared.ReactDOM = require('react-dom');
-    shared.makeComponent = function makeComponent(args) {
+
+    function makeComponent(args) {
         let children = args.slice(2).map(a => Array.isArray(a) ? makeComponent(a) : a);
 
         Object.keys(args[1]).reduce(function (collect, key) {
@@ -48,11 +49,37 @@ oninit(function(exports, shared) {
         componentDidMount () {
             this.domNode = ReactDOM.findDOMNode(this);
         }
+        getMod (modName) {
+            return modName in this.state.mods && this.state.mods[modName] || ''
+        }
         setMod (modName, modVal) {
             // TODO: onBeforeSetMod and onSetMod
+            var typeModVal = typeof modVal;
+            if(typeModVal === 'undefined') {
+                modVal = true;
+            } else if(typeModVal === 'boolean') {
+                modVal === false && (modVal = '');
+            } else {
+                modVal = modVal.toString();
+            }
+
             this.setState({
                 mods: Object.assign({}, this.state.mods, { [modName]: modVal })
             });
+        }
+        hasMod (modName, modVal) {
+            var typeModVal = typeof modVal;
+            typeModVal === 'undefined' || typeModVal === 'boolean' || (modVal = modVal.toString());
+
+            var res = this.getMod(modName) === (modVal || '');
+            return arguments.length === 1? !res : res;
+        }
+        toggleMod (modName) {
+            this.setMod(modName, !this.state.mods[modName]);
+        }
+        render () {
+            var vidom = exports.apply(Object.assign({}, this.state));
+            return makeComponent(vidom);
         }
     };
 });

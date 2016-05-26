@@ -37,9 +37,5 @@ oninit(function(exports, shared) {
             this.setMod('hovered', false);
             this.refs.control.removeEventListener('blur', this._onBlur);
         }
-        render () {
-            var vidom = exports.apply(Object.assign({}, this.state));
-            return shared.makeComponent(vidom);
-        }
     };
 });
