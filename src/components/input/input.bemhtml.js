@@ -33,11 +33,3 @@ oninit(function(exports, shared) {
         }
     }
 });
-block('input').match(function () {
-    return !this.ctx._react;
-})(
-    def()(function () {
-        var ctx = this.extend({}, this.ctx);
-        return this.createElement(this.components.input, { bemjson: ctx });
-    })
-);

@@ -83,3 +83,15 @@ oninit(function(exports, shared) {
         }
     };
 });
+block('*').match(function () {
+    return !this.ctx._react;
+})(
+    def()(function () {
+        if (apply('js') && this.components[this.ctx.block]) {
+            var ctx = this.extend({}, this.ctx);
+            return this.createElement(this.components[this.ctx.block], { bemjson: ctx });
+        } else {
+            return applyNext()
+        }
+    })
+);

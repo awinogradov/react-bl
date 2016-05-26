@@ -51,11 +51,3 @@ oninit(function(exports, shared) {
 block('button').attrs()(function () {
         return this.extend(applyNext(), { ref: 'control' })
     })
-block('button').match(function () {
-    return !this.ctx._react;
-})(
-    def()(function () {
-        var ctx = this.extend({}, this.ctx);
-        return this.createElement(this.components.button, { bemjson: ctx });
-    })
-);
