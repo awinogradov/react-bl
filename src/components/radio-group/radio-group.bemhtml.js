@@ -7,7 +7,7 @@ block('radio-group')(
             isValDef = typeof ctx.val !== 'undefined';
 
         const React = require('react');
-        const Radio = require('../src/components/radio/radio');
+        const Radio = require('../components/radio/radio');
 
         return (ctx.options || []).map(function(option, i) {
             return [

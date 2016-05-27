@@ -5,7 +5,7 @@ block('select').elem('button')(
             mods = this.mods;
 
         const React = require('react');
-        const Button = require('../src/components/button/button');
+        const Button = require('../components/button/button');
         const selectComponent = select._select;
 
         return React.createElement(Button, {

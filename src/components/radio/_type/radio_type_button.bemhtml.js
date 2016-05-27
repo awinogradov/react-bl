@@ -3,7 +3,7 @@ block('radio').mod('type', 'button')(
         'use strict';
         
         const React = require('react');
-        const Button = require('../src/components/button/button');
+        const Button = require('../components/button/button');
 
         const ctx = this.ctx,
             mods = this.mods;
