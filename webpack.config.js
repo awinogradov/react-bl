@@ -2,22 +2,15 @@ const path = require('path');
 const bemLoader = require('bem-loader');
 const CollectBemAssetsPlugin = bemLoader.CollectBemAssetsPlugin;
 const fs = require('fs-extra');
-const bemxjst = require('bem-xjst');
+function wrapTemplates (code) {
+    return `module.exports = function (${ require('xjst-vidom').prototype.locals.join(', ') }) {
+    ${ code }
+    }
+    `;
+}
 
 module.exports = {
     entry: './src/index.js',
-    module: {
-        loaders: [
-            {
-                test: /\.jsx?$/,
-                exclude: /(node_modules)/,
-                loader: 'babel',
-                query: {
-                    presets: ['react', 'es2015']
-                }
-            }
-        ]
-    },
     devtool: 'source-map',
     output: {
         path: path.join(__dirname, 'dist'),
@@ -28,10 +21,8 @@ module.exports = {
             done: function(data) {
                 if (process.env.STANDALONE) {
                     fs.outputFileSync(
-                        './dist/templates.js',
-                        bemxjst.vidom.generate(
-                            bemLoader.generateBemHtml(data.bemhtml)
-                        )
+                        './src/provider/templates.js',
+                        wrapTemplates(bemLoader.generateBemHtml(data.bemhtml))
                     );
                 }
             },

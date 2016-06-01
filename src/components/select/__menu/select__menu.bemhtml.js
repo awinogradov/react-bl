@@ -1,8 +1,8 @@
 block('select').elem('menu')(
     def()(function() {
         const React = require('react');
-        const Menu = require('../src/components/menu/menu');
-        const MenuItem = require('../src/components/menu-item/menu-item');
+        const Menu = require('../components/menu/menu');
+        const MenuItem = require('../components/menu-item/menu-item');
         const _select = this.ctx._select;
         const selectComponent = _select._select;
 

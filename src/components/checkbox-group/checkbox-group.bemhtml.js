@@ -8,7 +8,7 @@ block('checkbox-group')(
             isValDef = typeof val !== 'undefined';
 
         const React = require('react');
-        const Checkbox = require('../src/components/checkbox/checkbox');
+        const Checkbox = require('../components/checkbox/checkbox');
 
         if(isValDef && !Array.isArray(val)) throw Error('checkbox-group: val must be an array');
 

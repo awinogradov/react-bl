@@ -2,7 +2,7 @@ block('popup')
     .match(function () { return !!this._select })
     .def()(function() {
         const React = require('react');
-        const Popup = require('../src/components/popup/popup');
+        const Popup = require('../components/popup/popup');
         const selectComponent = this._select;
 
         return React.createElement(Popup, {

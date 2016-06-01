@@ -3,3 +3,4 @@ node_modules
 npm-debug.log
 dist
 examples/index.html
+src/provider/templates.js

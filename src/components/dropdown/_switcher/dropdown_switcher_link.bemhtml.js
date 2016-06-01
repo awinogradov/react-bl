@@ -5,7 +5,7 @@ block('dropdown').mod('switcher', 'link').elem('switcher').def()(function() {
     return applyNext();
 
     const React = require('react');
-    const Link = require('../src/components/link/link');
+    const Link = require('../components/link/link');
     const dropdown = this._dropdown;
     const switcher = dropdown.switcher;
 

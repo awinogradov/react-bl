@@ -1,6 +1,6 @@
 'use strict';
 
-import ReactDOM from 'react-dom';
+const ReactDOM = require ('react-dom');
 const BEM = require('../../core/bem/bem');
 const provide = require('../../provider/provider');
 

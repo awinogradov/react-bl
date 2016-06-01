@@ -1,5 +1,10 @@
 const reactXjst = require('react-xjst');
 const React = require('react');
-const templates = require('../../dist/templates.js');
+const Runtime = require("xjst-vidom");
 
-module.exports = reactXjst(templates, React);
+let vidom = {}
+let api = new Runtime({});
+api.compile(require('./templates'));
+api.exportApply(vidom)
+
+module.exports = reactXjst(vidom, React);

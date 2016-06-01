@@ -53,7 +53,7 @@ module.exports = {
             },
             {
                 test: /\.jsx?$/,
-                exclude: /(node_modules)/,
+                include: path.resolve(__dirname),
                 loader: 'babel',
                 query: {
                     presets: ['react', 'es2015']
