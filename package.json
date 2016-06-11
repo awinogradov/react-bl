@@ -13,7 +13,7 @@
     "bem-components": "^3.0.0",
     "bem-core": "^3.0.1",
     "bem-naming": "^1.0.1",
-    "param-case": "^1.1.2",
+    "param-case": "^2.0.0",
     "react-xjst": "github:bem-contrib/react-xjst#f2dc651",
     "xjst-vidom": "github:guria/xjst-vidom#1a7cb7b"
   },
