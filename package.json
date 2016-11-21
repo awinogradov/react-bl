@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "bem-cn": "^1.2.2",
-    "bem-components": "^3.0.0",
+    "bem-components": "^3.1.2",
     "bem-core": "^3.0.1",
     "bem-naming": "^1.0.1",
     "param-case": "^1.1.2",
