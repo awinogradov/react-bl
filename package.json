@@ -30,7 +30,7 @@
     "fs-extra": "^0.26.7",
     "gh-pages": "^0.11.0",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0",
+    "react-dom": "^15.4.2",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.0"
   },
